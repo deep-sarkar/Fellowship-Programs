@@ -1,6 +1,6 @@
 #! /usr/bin/bash
 
-echo "Enter how many times you want to flip"
+echo "Enter number of times you want to flip the coin"
 read n
 h=0
 t=0
