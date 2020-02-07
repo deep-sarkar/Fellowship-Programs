@@ -6,8 +6,8 @@ h=0
 t=0
 while((n>0))
 do
-	a=$((RANDOM%2))
-	if [ $a -eq 1 ]
+	a=0.$((RANDOM))
+	if (( $( echo $a 0.5 | awk '{print ($1>$2)}') ))
 	then
 		echo "TAIL"
 		((t++))
