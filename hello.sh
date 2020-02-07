@@ -1,5 +1,7 @@
 #! /usr/bin/bash
 
+st="Hello username, How are you?"
+echo "$st"
 echo "Enter your name"
 read name
-echo "Hello $name, How are you?"
+echo "${st/username/$name}"
