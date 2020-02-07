@@ -7,7 +7,8 @@ do
 	echo "2"
 	n=$((n/2))
 done
-for (( i=3 ; i<= n/2 ; i=$(($i+2)) ))
+a=$( echo $n | awk '{printf "%.0f\n" , sqrt($1)}')
+for (( i=3 ; i<= a ; i=$(($i+2)) ))
 do
 	while [ $(($n%$i)) -eq 0 ]
 	do
