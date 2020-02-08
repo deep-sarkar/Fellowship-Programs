@@ -11,25 +11,25 @@ function checkDuplicate()
 {
 for(( i=0;i<$1;i++ ))
 do
-generateRandom
+	generateRandom
+	countDup=0
 	if [ $i -eq 0 ]
 	then
 		ar[$i]=$random
         else
-	countDup=0
-	for(( j=0;j<$i;j++ ))
+	for(( j=0; j<$i; j++ ))
 	do
 		if [ $((ar[$j])) -eq $random ]
 		then
-			((countDup++))
+			(( countDup++ ))
 		fi
 	done
 	fi
-	if [ $countDup -gt 0 ]
+	if [ $countDup -eq 0 ]
 	then
-		((i--))
+		ar[$i]=$random
 	else
-	ar[$i]=$random
+		((i--))
 	fi
 done
 }
