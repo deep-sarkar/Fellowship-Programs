@@ -62,6 +62,7 @@ echo "10      $count10           $(($count10*10))"
 echo "5       $count5            $(($count5*5))"
 echo "2       $count2            $(($count2*2))"
 echo "1       $count1            $(($count1*1))"
+echo "total notes : $(($count1000+$count500+$count100+$count50+$count10+$count5+$count2+$count1))"
 }
 
 #main method
